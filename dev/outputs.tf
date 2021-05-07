@@ -55,6 +55,7 @@ output "tfx-ttap-tfc_agent_pool-services_tap-tat-main-id" {
 output "tfx-ttap-tfc_agent_pool-services_tap-tat-main-token" {
   value       = module.agent-pool-svc.tap-tat-main-token
   description = "Terraform Cloud/Enterprise [terraform-tfe-agent-pool] TFC agent pool for the services team: Agent token material: SENSITIVE"
+  sensitive = true
 }
 
 //// Security pool
@@ -78,5 +79,6 @@ output "tfx-ttap-tfc_agent_pool-security_tap-tat-main-id" {
 output "tfx-ttap-tfc_agent_pool-security_tap-tat-main-token" {
   value       = module.agent-pool-sec.tap-tat-main-token
   description = "Terraform Cloud/Enterprise [terraform-tfe-agent-pool] TFC agent pool for the security team: Agent token material: SENSITIVE"
+  sensitive = true
 }
 
