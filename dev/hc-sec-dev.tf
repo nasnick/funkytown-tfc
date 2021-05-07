@@ -36,49 +36,49 @@ module "workspace-hc-sec-dev" {
 
 //// Azure creds
 //
-# module "varArmSubscriptionId-hc-sec-dev" {
-#   source  = "app.terraform.io/funkytown/vars/tfe"
-#   version = "1.0.14"
+module "varArmSubscriptionId-hc-sec-dev" {
+  source  = "app.terraform.io/funkytown/vars/tfe"
+  version = "1.0.14"
 
-#   key          = "ARM_SUBSCRIPTION_ID"
-#   value        = var.ARM_SUBSCRIPTION_ID
-#   category     = "env"
-#   workspace_id = module.workspace-hc-sec-dev.tw-tw-main-id
-#   sensitive    = true
-# }
+  key          = "ARM_SUBSCRIPTION_ID"
+  value        = var.ARM_SUBSCRIPTION_ID
+  category     = "env"
+  workspace_id = module.workspace-hc-sec-dev.tw-tw-main-id
+  sensitive    = true
+}
 
-# module "varArmClientId-hc-sec-dev" {
-#   source  = "app.terraform.io/funkytown/vars/tfe"
-#   version = "1.0.14"
+module "varArmClientId-hc-sec-dev" {
+  source  = "app.terraform.io/funkytown/vars/tfe"
+  version = "1.0.14"
 
-#   key          = "ARM_CLIENT_ID"
-#   value        = var.ARM_CLIENT_ID
-#   category     = "env"
-#   workspace_id = module.workspace-hc-sec-dev.tw-tw-main-id
-#   sensitive    = true
-# }
+  key          = "ARM_CLIENT_ID"
+  value        = var.ARM_CLIENT_ID
+  category     = "env"
+  workspace_id = module.workspace-hc-sec-dev.tw-tw-main-id
+  sensitive    = true
+}
 
-# module "varArmClientSecret-hc-sec-dev" {
-#   source  = "app.terraform.io/funkytown/vars/tfe"
-#   version = "1.0.14"
+module "varArmClientSecret-hc-sec-dev" {
+  source  = "app.terraform.io/funkytown/vars/tfe"
+  version = "1.0.14"
 
-#   key          = "ARM_CLIENT_SECRET"
-#   value        = var.ARM_CLIENT_SECRET
-#   category     = "env"
-#   workspace_id = module.workspace-hc-sec-dev.tw-tw-main-id
-#   sensitive    = true
-# }
+  key          = "ARM_CLIENT_SECRET"
+  value        = var.ARM_CLIENT_SECRET
+  category     = "env"
+  workspace_id = module.workspace-hc-sec-dev.tw-tw-main-id
+  sensitive    = true
+}
 
-# module "varArmTenantId-hc-sec-dev" {
-#   source  = "app.terraform.io/funkytown/vars/tfe"
-#   version = "1.0.14"
+module "varArmTenantId-hc-sec-dev" {
+  source  = "app.terraform.io/funkytown/vars/tfe"
+  version = "1.0.14"
 
-#   key          = "ARM_TENANT_ID"
-#   value        = var.ARM_TENANT_ID
-#   category     = "env"
-#   workspace_id = module.workspace-hc-sec-dev.tw-tw-main-id
-#   sensitive    = true
-# }
+  key          = "ARM_TENANT_ID"
+  value        = var.ARM_TENANT_ID
+  category     = "env"
+  workspace_id = module.workspace-hc-sec-dev.tw-tw-main-id
+  sensitive    = true
+}
 
 //// GCP creds
 //

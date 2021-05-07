@@ -82,13 +82,13 @@ module "varArmTenantId-hc-net-dev" {
 
 //// GCP creds
 //
-module "varGoogleCredentials-hc-net-dev" {
-  source  = "app.terraform.io/funkytown/vars/tfe"
-  version = "1.0.14"
+# module "varGoogleCredentials-hc-net-dev" {
+#   source  = "app.terraform.io/funkytown/vars/tfe"
+#   version = "1.0.14"
 
-  key          = "GOOGLE_CREDENTIALS"
-  value        = var.GOOGLE_CREDENTIALS
-  category     = "env"
-  workspace_id = module.workspace-hc-net-dev.tw-tw-main-id
-  sensitive    = true
-}
+#   key          = "GOOGLE_CREDENTIALS"
+#   value        = var.GOOGLE_CREDENTIALS
+#   category     = "env"
+#   workspace_id = module.workspace-hc-net-dev.tw-tw-main-id
+#   sensitive    = true
+# }
