@@ -34,6 +34,12 @@ module "workspace-hc-svc-dev" {
 //   sensitive   = true
 // }
 
+//// Provider
+//
+provider "azurerm" {
+  features {}
+}
+
 //// Azure creds
 //
 module "varArmSubscriptionId-hc-svc-dev" {
