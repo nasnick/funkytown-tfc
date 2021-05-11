@@ -10,6 +10,7 @@ module "workspace-hc-svc-dev" {
   terraform_version = var.tf_version
   working_directory = var.SVC_VCS_WORKING_DIRECTORY
   vcs_repo_identifier = var.SVC_VCS_REPO_IDENTIFIER
+  oauth_token         = var.GITHUB_OAUTH_APP_TOKEN
 }
 
 //// AWS creds - Now via Doormat
