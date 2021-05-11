@@ -2,15 +2,15 @@
 //
 module "workspace-hc-svc-dev" {
   source  = "app.terraform.io/funkytown/workspaces/tfe"
-  version = "1.0.18"
+  version = "1.0.19"
 
   workspace_name    = "hc-svc-dev"
   org               = var.org
   auto_apply        = true
   terraform_version = var.tf_version
-  working_directory = var.SVC_VCS_WORKING_DIRECTORY
-  vcs_repo_identifier = var.SVC_VCS_REPO_IDENTIFIER
-  oauth_token         = var.GITHUB_OAUTH_APP_TOKEN
+  working_directory      = var.SVC_VCS_WORKING_DIRECTORY
+  vcs_repo_identifier    = var.SVC_VCS_REPO_IDENTIFIER
+  github_oauth_app_token = var.GITHUB_OAUTH_APP_TOKEN
 }
 
 //// AWS creds - Now via Doormat
