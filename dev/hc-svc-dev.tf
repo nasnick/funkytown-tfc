@@ -2,15 +2,14 @@
 //
 module "workspace-hc-svc-dev" {
   source  = "app.terraform.io/funkytown/workspaces/tfe"
-  version = "1.0.16"
+  version = "1.0.17"
 
   workspace_name    = "hc-svc-dev"
   org               = var.org
   auto_apply        = true
   terraform_version = var.tf_version
-  vcs_repo {
-
-  }
+  working_directory = var.SVC_VCS_WORKING_DIRECTORY
+  vcs_repo_identifier = var.SVC_VCS_REPO_IDENTIFIER
 }
 
 //// AWS creds - Now via Doormat
@@ -100,6 +99,27 @@ module "varGithubOauthToken-hc-svc-dev" {
   sensitive    = true
 }
 
+module "varWorkingDirectory-hc-svc-dev" {
+  source  = "app.terraform.io/funkytown/vars/tfe"
+  version = "1.0.14"
+
+  key          = "SVC_VCS_WORKING_DIRECTORY"
+  value        = var.SVC_VCS_WORKING_DIRECTORY
+  category     = "env"
+  workspace_id = module.workspace-hc-svc-dev.tw-tw-main-id
+  sensitive    = true
+}
+
+module "varGithubRepoIdentifier-hc-svc-dev" {
+  source  = "app.terraform.io/funkytown/vars/tfe"
+  version = "1.0.14"
+
+  key          = "SVC_VCS_REPO_IDENTIFIER"
+  value        = var.SVC_VCS_REPO_IDENTIFIER
+  category     = "env"
+  workspace_id = module.workspace-hc-svc-dev.tw-tw-main-id
+  sensitive    = true
+}
 //// GCP creds
 //
 # module "varGoogleCredentials-hc-svc-dev" {
