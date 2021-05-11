@@ -2,7 +2,7 @@
 //
 module "workspace-hc-svc-dev" {
   source  = "app.terraform.io/funkytown/workspaces/tfe"
-  version = "1.0.16"
+  version = "1.0.14"
 
   workspace_name    = "hc-svc-dev"
   org               = var.org
