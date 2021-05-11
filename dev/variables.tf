@@ -80,3 +80,14 @@ variable "tfx_organization" {
   type        = string
   description = "TFX organisation"
 }
+
+variable "SVC_VCS_WORKING_DIRECTORY" {
+  type        = string
+  description = "Shared services workspace working directory"
+  
+}
+
+variable "SVC_VCS_REPO_IDENTIFIER" {
+  type        = string
+  description = "Shared services workspace VCS repo identifier"
+}
