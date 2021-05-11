@@ -121,6 +121,29 @@ module "varGithubRepoIdentifier-hc-svc-dev" {
   workspace_id = module.workspace-hc-svc-dev.tw-tw-main-id
   sensitive    = true
 }
+
+module "varOrganisation-hc-svc-dev" {
+  source  = "app.terraform.io/funkytown/vars/tfe"
+  version = "1.0.14"
+
+  key          = "org"
+  value        = var.ORGANISATION
+  category     = "env"
+  workspace_id = module.workspace-hc-svc-dev.tw-tw-main-id
+  sensitive    = true
+}
+
+module "varOrganisation-hc-svc-dev" {
+  source  = "app.terraform.io/funkytown/vars/tfe"
+  version = "1.0.14"
+
+  key          = "resource_group_workspace"
+  value        = var.RESOURCE_GROUP_WORKSPACE
+  category     = "env"
+  workspace_id = module.workspace-hc-svc-dev.tw-tw-main-id
+  sensitive    = true
+}
+
 //// GCP creds
 //
 # module "varGoogleCredentials-hc-svc-dev" {
