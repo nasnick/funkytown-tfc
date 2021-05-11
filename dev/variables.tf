@@ -53,6 +53,10 @@ variable "ARM_TENANT_ID" {
   description = "Azure tenant ID"
 }
 
+variable "GITHUB_OAUTH_APP_TOKEN" {
+    type        = string
+  description = "Github oAuth app token"
+}
 //// Sentinel policy set addition
 //
 variable "policy_organization" {
