@@ -86,6 +86,17 @@ module "varArmTenantId-hc-svc-dev" {
   sensitive    = true
 }
 
+module "varGithubOauthToken-hc-svc-dev" {
+  source  = "app.terraform.io/funkytown/vars/tfe"
+  version = "1.0.14"
+
+  key          = "GITHUB_OAUTH_APP_TOKEN"
+  value        = var.GITHUB_OAUTH_APP_TOKEN
+  category     = "env"
+  workspace_id = module.workspace-hc-svc-dev.tw-tw-main-id
+  sensitive    = true
+}
+
 //// GCP creds
 //
 # module "varGoogleCredentials-hc-svc-dev" {
