@@ -126,7 +126,7 @@ module "varOrganisation-hc-svc-dev" {
   source  = "app.terraform.io/funkytown/vars/tfe"
   version = "1.0.14"
 
-  key          = "org"
+  key          = "ORGANISATION"
   value        = var.ORGANISATION
   category     = "env"
   workspace_id = module.workspace-hc-svc-dev.tw-tw-main-id
@@ -137,7 +137,7 @@ module "varResourceGroupWorkspace-hc-svc-dev" {
   source  = "app.terraform.io/funkytown/vars/tfe"
   version = "1.0.14"
 
-  key          = "resource_group_workspace"
+  key          = "RESOURCE_GROUP_WORKSPACE"
   value        = var.RESOURCE_GROUP_WORKSPACE
   category     = "env"
   workspace_id = module.workspace-hc-svc-dev.tw-tw-main-id

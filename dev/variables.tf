@@ -91,3 +91,7 @@ variable "SVC_VCS_REPO_IDENTIFIER" {
   type        = string
   description = "Shared services workspace VCS repo identifier"
 }
+
+variable "ORGANISATION" {}
+
+variable "RESOURCE_GROUP_WORKSPACE" {}
