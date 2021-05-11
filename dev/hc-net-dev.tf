@@ -105,6 +105,28 @@ module "varGithubRepoIdentifier-hc-net-dev" {
   sensitive    = true
 }
 
+module "varOrganisation-hc-net-dev" {
+  source  = "app.terraform.io/funkytown/vars/tfe"
+  version = "1.0.14"
+
+  key          = "ORGANISATION"
+  value        = var.ORGANISATION
+  category     = "env"
+  workspace_id = module.workspace-hc-net-dev.tw-tw-main-id
+  sensitive    = true
+}
+
+module "varResourceGroupWorkspace-hc-net-dev" {
+  source  = "app.terraform.io/funkytown/vars/tfe"
+  version = "1.0.14"
+
+  key          = "RESOURCE_GROUP_WORKSPACE"
+  value        = var.RESOURCE_GROUP_WORKSPACE
+  category     = "env"
+  workspace_id = module.workspace-hc-net-dev.tw-tw-main-id
+  sensitive    = true
+}
+
 //// GCP creds
 //
 # module "varGoogleCredentials-hc-net-dev" {
