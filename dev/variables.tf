@@ -31,7 +31,7 @@ variable "tf_version" {
 # variable "GOOGLE_CREDENTIALS" {
 #   type        = string
 #   description = "Google application credentials in json"
-# }
+# } 
 
 variable "ARM_SUBSCRIPTION_ID" {
   type        = string
