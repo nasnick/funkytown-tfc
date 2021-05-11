@@ -8,8 +8,8 @@ module "workspace-hc-svc-dev" {
   org               = var.org
   auto_apply        = true
   terraform_version = var.tf_version
-  # working_directory = var.SVC_VCS_WORKING_DIRECTORY
-  # vcs_repo_identifier = var.SVC_VCS_REPO_IDENTIFIER
+  working_directory = var.SVC_VCS_WORKING_DIRECTORY
+  vcs_repo_identifier = var.SVC_VCS_REPO_IDENTIFIER
 }
 
 //// AWS creds - Now via Doormat
