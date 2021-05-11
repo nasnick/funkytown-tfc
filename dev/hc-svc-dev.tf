@@ -133,7 +133,7 @@ module "varOrganisation-hc-svc-dev" {
   sensitive    = true
 }
 
-module "varOrganisation-hc-svc-dev" {
+module "varResourceGroupWorkspace-hc-svc-dev" {
   source  = "app.terraform.io/funkytown/vars/tfe"
   version = "1.0.14"
 
