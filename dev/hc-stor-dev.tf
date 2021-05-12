@@ -8,6 +8,9 @@ module "workspace-hc-stor-dev" {
   org               = var.org
   auto_apply        = true
   terraform_version = var.tf_version
+  working_directory      = var.STOR_VCS_WORKING_DIRECTORY
+  vcs_repo_identifier    = var.STOR_VCS_REPO_IDENTIFIER
+  github_oauth_app_token = var.GITHUB_OAUTH_APP_TOKEN
 }
 
 //// AWS creds - Now via Doormat
@@ -78,6 +81,28 @@ module "varArmTenantId-hc-stor-dev" {
   category     = "env"
   workspace_id = module.workspace-hc-stor-dev.tw-tw-main-id
   sensitive    = true
+}
+
+module "varWorkingDirectory-hc-stor-dev" {
+  source  = "app.terraform.io/funkytown/vars/tfe"
+  version = "1.0.14"
+
+  key          = "STOR_VCS_WORKING_DIRECTORY"
+  value        = var.STOR_VCS_WORKING_DIRECTORY
+  category     = "env"
+  workspace_id = module.workspace-hc-stor-dev.tw-tw-main-id
+  sensitive    = false
+}
+
+module "varGithubRepoIdentifier-hc-stor-dev" {
+  source  = "app.terraform.io/funkytown/vars/tfe"
+  version = "1.0.14"
+
+  key          = "STOR_VCS_REPO_IDENTIFIER"
+  value        = var.STOR_VCS_REPO_IDENTIFIER
+  category     = "env"
+  workspace_id = module.workspace-hc-stor-dev.tw-tw-main-id
+  sensitive    = false
 }
 
 //// GCP creds

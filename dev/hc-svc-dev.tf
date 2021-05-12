@@ -108,7 +108,7 @@ module "varWorkingDirectory-hc-svc-dev" {
   value        = var.SVC_VCS_WORKING_DIRECTORY
   category     = "env"
   workspace_id = module.workspace-hc-svc-dev.tw-tw-main-id
-  sensitive    = true
+  sensitive    = false
 }
 
 module "varGithubRepoIdentifier-hc-svc-dev" {
@@ -119,7 +119,7 @@ module "varGithubRepoIdentifier-hc-svc-dev" {
   value        = var.SVC_VCS_REPO_IDENTIFIER
   category     = "env"
   workspace_id = module.workspace-hc-svc-dev.tw-tw-main-id
-  sensitive    = true
+  sensitive    = false
 }
 
 //// GCP creds

@@ -14,3 +14,13 @@ variable "terraform_version" {
   type        = string
   description = "Set terraform core version to run in the workspace"
 }
+
+variable "working_directory" {
+  type        = string
+  description = "Set the default working directory"
+}
+
+variable "vcs_repo" {
+    type        = string
+  description = "Set the default VCS repo"
+}

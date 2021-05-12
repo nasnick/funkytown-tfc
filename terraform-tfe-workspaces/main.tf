@@ -3,4 +3,5 @@ resource "tfe_workspace" "main" {
   organization      = var.org
   auto_apply        = var.auto_apply
   terraform_version = var.terraform_version
+  working_directory = var.working_directory
 }
