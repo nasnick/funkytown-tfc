@@ -92,9 +92,9 @@ variable "SVC_VCS_REPO_IDENTIFIER" {
   description = "Shared services workspace VCS repo identifier"
 }
 
-variable "ORGANISATION" {}
+variable "organisation" {}
 
-variable "RESOURCE_GROUP_WORKSPACE" {}
+variable "resource_group_workspace" {}
 
 variable "NET_VCS_WORKING_DIRECTORY" {}
 
