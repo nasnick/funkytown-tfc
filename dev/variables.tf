@@ -99,3 +99,7 @@ variable "resource_group_workspace" {}
 variable "NET_VCS_WORKING_DIRECTORY" {}
 
 variable "NET_VCS_REPO_IDENTIFIER" {}
+
+variable "STOR_VCS_WORKING_DIRECTORY" {}
+
+variable "STOR_VCS_REPO_IDENTIFIER" {}
