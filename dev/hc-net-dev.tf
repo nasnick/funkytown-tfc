@@ -111,7 +111,7 @@ module "varOrganisation-hc-net-dev" {
 
   key          = "organisation"
   value        = var.organisation
-  category     = "env"
+  category     = "terraform"
   workspace_id = module.workspace-hc-net-dev.tw-tw-main-id
 }
 
@@ -121,7 +121,7 @@ module "varResourceGroupWorkspace-hc-net-dev" {
 
   key          = "resource_group_workspace"
   value        = var.resource_group_workspace
-  category     = "env"
+  category     = "terraform"
   workspace_id = module.workspace-hc-net-dev.tw-tw-main-id
 }
 
