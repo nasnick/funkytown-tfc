@@ -2,7 +2,7 @@
 //
 module "workspace-hc-net-dev" {
   source  = "app.terraform.io/funkytown/workspaces/tfe"
-  version = "1.0.21"
+  version = "1.0.24"
 
   workspace_name    = "hc-net-dev"
   org               = var.org
@@ -11,6 +11,7 @@ module "workspace-hc-net-dev" {
   working_directory      = var.NET_VCS_WORKING_DIRECTORY
   vcs_repo_identifier    = var.NET_VCS_REPO_IDENTIFIER
   github_oauth_app_token = var.GITHUB_OAUTH_APP_TOKEN
+  remote_state_consumer_ids = [module.workspace-hc-stor-dev.tw-tw-main-id]
 }
 
 //// AWS creds - now via Doormat
