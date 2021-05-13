@@ -126,7 +126,7 @@ module "varResourceGroupWorkspace-hc-stor-dev" {
   workspace_id = module.workspace-hc-stor-dev.tw-tw-main-id
 }
 
-module "varResourceGroupWorkspace-hc-stor-dev" {
+module "varStorageAccountRemoteStateConsumer_ids-hc-stor-dev" {
   source  = "app.terraform.io/funkytown/vars/tfe"
   version = "1.0.14"
 
