@@ -2,7 +2,7 @@
 //
 module "workspace-hc-stor-dev" {
   source  = "app.terraform.io/funkytown/workspaces/tfe"
-  version = "1.0.22"
+  version = "1.0.23"
 
   workspace_name    = "hc-stor-dev"
   org               = var.org
