@@ -106,6 +106,6 @@ variable "STOR_VCS_WORKING_DIRECTORY" {}
 
 variable "STOR_VCS_REPO_IDENTIFIER" {}
 
-variable "storage_account_remote_state_consumer_ids" {
-  type = list(any)
-}
+# variable "storage_account_remote_state_consumer_ids" {
+#   type = list(any)
+# }
