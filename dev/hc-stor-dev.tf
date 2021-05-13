@@ -2,7 +2,7 @@
 //
 module "workspace-hc-stor-dev" {
   source  = "app.terraform.io/funkytown/workspaces/tfe"
-  version = "1.0.21"
+  version = "1.0.22"
 
   workspace_name    = "hc-stor-dev"
   org               = var.org
@@ -11,6 +11,7 @@ module "workspace-hc-stor-dev" {
   working_directory      = var.STOR_VCS_WORKING_DIRECTORY
   vcs_repo_identifier    = var.STOR_VCS_REPO_IDENTIFIER
   github_oauth_app_token = var.GITHUB_OAUTH_APP_TOKEN
+  remote_state_consumer_ids = var.storage_account_remote_state_consumer_ids
 }
 
 //// AWS creds - Now via Doormat
@@ -103,6 +104,36 @@ module "varGithubRepoIdentifier-hc-stor-dev" {
   category     = "env"
   workspace_id = module.workspace-hc-stor-dev.tw-tw-main-id
   sensitive    = false
+}
+
+module "varOrganisation-hc-stor-dev" {
+  source  = "app.terraform.io/funkytown/vars/tfe"
+  version = "1.0.14"
+
+  key          = "organisation"
+  value        = var.organisation
+  category     = "terraform"
+  workspace_id = module.workspace-hc-stor-dev.tw-tw-main-id
+}
+
+module "varResourceGroupWorkspace-hc-stor-dev" {
+  source  = "app.terraform.io/funkytown/vars/tfe"
+  version = "1.0.14"
+
+  key          = "resource_group_workspace"
+  value        = var.resource_group_workspace
+  category     = "terraform"
+  workspace_id = module.workspace-hc-stor-dev.tw-tw-main-id
+}
+
+module "varResourceGroupWorkspace-hc-stor-dev" {
+  source  = "app.terraform.io/funkytown/vars/tfe"
+  version = "1.0.14"
+
+  key          = "storage_account_remote_state_consumer_ids"
+  value        = var.storage_account_remote_state_consumer_ids
+  category     = "terraform"
+  workspace_id = module.workspace-hc-stor-dev.tw-tw-main-id
 }
 
 //// GCP creds
