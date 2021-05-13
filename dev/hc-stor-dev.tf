@@ -11,7 +11,7 @@ module "workspace-hc-stor-dev" {
   working_directory      = var.STOR_VCS_WORKING_DIRECTORY
   vcs_repo_identifier    = var.STOR_VCS_REPO_IDENTIFIER
   github_oauth_app_token = var.GITHUB_OAUTH_APP_TOKEN
-  remote_state_consumer_ids = [module.workspace-hc-net-dev.tw-tw-main-id, module.workspace-hc-svc-dev.tw-tw-main-id]
+  remote_state_consumer_ids = []
 }
 
 //// AWS creds - Now via Doormat
