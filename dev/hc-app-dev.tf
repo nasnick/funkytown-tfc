@@ -116,12 +116,12 @@ module "varOrganisation-hc-app-dev" {
   workspace_id = module.workspace-hc-app-dev.tw-tw-main-id
 }
 
-module "varResourceGroupWorkspace-hc-app-dev" {
+module "varStorageAccountWorkspace-hc-app-dev" {
   source  = "app.terraform.io/funkytown/vars/tfe"
   version = "1.0.14"
 
-  key          = "resource_group_workspace"
-  value        = var.resource_group_workspace
+  key          = "storage_account_workspace"
+  value        = var.storage_account_workspace
   category     = "terraform"
   workspace_id = module.workspace-hc-app-dev.tw-tw-main-id
 }
