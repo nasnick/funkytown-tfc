@@ -110,6 +110,10 @@ variable "STOR_VCS_REPO_IDENTIFIER" {}
 #   type = list(any)
 # }
 
+variable "APP_VCS_WORKING_DIRECTORY" {}
+
+variable "APP_VCS_REPO_IDENTIFIER" {}
+
 variable "virtual_network_workspace" {}
 
 variable "shared_services_workspace" {}
