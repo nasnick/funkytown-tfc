@@ -94,8 +94,6 @@ variable "SVC_VCS_REPO_IDENTIFIER" {
 
 variable "organisation" {}
 
-variable "resource_group_workspace" {}
-
 variable "network_workspace" {}
 
 variable "NET_VCS_WORKING_DIRECTORY" {}
