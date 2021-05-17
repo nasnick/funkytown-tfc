@@ -109,3 +109,7 @@ variable "STOR_VCS_REPO_IDENTIFIER" {}
 # variable "storage_account_remote_state_consumer_ids" {
 #   type = list(any)
 # }
+
+variable "virtual_network_workspace" {}
+
+variable "shared_services_workspace" {}
