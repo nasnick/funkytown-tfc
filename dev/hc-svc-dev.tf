@@ -11,7 +11,7 @@ module "workspace-hc-svc-dev" {
   working_directory      = var.SVC_VCS_WORKING_DIRECTORY
   vcs_repo_identifier    = var.SVC_VCS_REPO_IDENTIFIER
   github_oauth_app_token = var.GITHUB_OAUTH_APP_TOKEN
-  remote_state_consumer_ids = [module.workspace-hc-stor-dev.tw-tw-main-id, module.workspace-hc-net-dev.tw-tw-main-id]
+  remote_state_consumer_ids = [module.workspace-hc-stor-dev.tw-tw-main-id, module.workspace-hc-net-dev.tw-tw-main-id, module.workspace-hc-app-dev.tw-tw-main-id]
 }
 
 //// AWS creds - Now via Doormat
