@@ -120,8 +120,8 @@ module "varResourceGroupWorkspace-hc-stor-dev" {
   source  = "app.terraform.io/funkytown/vars/tfe"
   version = "1.0.14"
 
-  key          = "resource_group_workspace"
-  value        = var.resource_group_workspace
+  key          = "shared_services_workspace"
+  value        = var.shared_services_workspace
   category     = "terraform"
   workspace_id = module.workspace-hc-stor-dev.tw-tw-main-id
 }
