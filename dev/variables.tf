@@ -115,3 +115,7 @@ variable "APP_VCS_REPO_IDENTIFIER" {}
 variable "virtual_network_workspace" {}
 
 variable "shared_services_workspace" {}
+
+variable "storage_account_workspace" {
+  
+}
