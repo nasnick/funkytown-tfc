@@ -130,8 +130,8 @@ module "varNetworkWorkspace-hc-stor-dev" {
   source  = "app.terraform.io/funkytown/vars/tfe"
   version = "1.0.14"
 
-  key          = "network_workspace"
-  value        = var.network_workspace
+  key          = "virtual_network_workspace"
+  value        = var.virtual_network_workspace
   category     = "terraform"
   workspace_id = module.workspace-hc-stor-dev.tw-tw-main-id
 }
